@@ -34,27 +34,32 @@ public class SceneTwo {
     protected Scene getScene() {
         if (thisScene == null) {
             thisScene = new Scene(root, 400, 400);
-
+            AnimationTimerMaker();
             tekstiScreeni = makeNewButton();
             root.getChildren().add(tekstiScreeni);
             toggleAnimator = false;
-            animator = new AnimationTimer() {
-                @Override
-                public void handle(long now) {
-                    counter++;
-                    if (counter >= cap) {
-                        counter -= cap;
-                        Random ran = new Random();
-                        tekstiScreeni.setText("Moi: " + counter + " jotain cap: " + cap + " + random  to show somethings: " + ran.nextDouble());
-                        System.out.println("Moi: " + counter + " jotain cap: " + cap + " + random  to show somethings: " + ran.nextDouble());
-                    }
-                }
-            };
-//            animator.start();
+
             tekstiScreeni.setLayoutX(200);
             root.getChildren().add(makeNewButton2());
         }
         return thisScene;
+    }
+
+    private void AnimationTimerMaker() {
+        animator = new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+                counter++;
+                if (counter >= cap) {
+                    counter -= cap;
+                    Random ran = new Random();
+                    tekstiScreeni.setText("Moi: " + counter + " jotain cap: " + cap + " + random  to show somethings: " + ran.nextDouble());
+                    System.out.println("Moi: " + counter + " jotain cap: " + cap + " + random  to show somethings: " + ran.nextDouble());
+                }
+            }
+        };
+//            animator.start();
+
     }
 
     private Button makeNewButton() {
