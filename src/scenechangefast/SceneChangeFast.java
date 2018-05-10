@@ -24,7 +24,7 @@ public class SceneChangeFast extends Application {
     @Override
     public void start(Stage primaryStage) {
 
-        primaryStage.setTitle(STYLESHEET_MODENA);
+        primaryStage.setTitle("moi");
         manager = new SceneManager(primaryStage);
         manager.startUp();
     }

@@ -28,6 +28,7 @@ public class ScenePi extends BaseScene{
                 public void handle(ActionEvent event) {
                     System.out.println("Olet nyt luokassa: " + this.getClass().toString());
                     manager.setScene(1);
+                    
                 }
             });
 
