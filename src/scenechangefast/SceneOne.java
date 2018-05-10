@@ -26,7 +26,8 @@ public class SceneOne {
 
     protected Scene getScene() {
         if (thisScene == null) {
-            thisScene = new Scene(root, 400, 400);
+            thisScene = new Scene(root);
+//            thisScene.set
             btn = makeNewButton();
             Button btn2 = makeNewButton2();
             btn2.setLayoutX(200);
@@ -46,6 +47,7 @@ public class SceneOne {
     private Button makeNewButton() {
         Button btnn = new Button();
         btnn.setText("Mene tokaan");
+                btnn.setId("moi");
         btnn.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
